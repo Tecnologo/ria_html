@@ -45,10 +45,14 @@ var controller = (function($, provider){
 
 	var crearDropDown = function( lista, label, value, id){
 		var select = $('#' + id).size() > 0 ? $('#' + id) : $('<select id=\'' + id + '\'></select>');
-		for(var i = 0; i < lista.length; i++){
-			var item = lista[i];
-			select.append($('<option value=\''+item[value]+'\'>'+item[label]+'</option>'));
-		};
+		if(lista.length === 0){
+			select.find('option').remove()
+		}else{
+			for(var i = 0; i < lista.length; i++){
+				var item = lista[i];
+				select.append($('<option value=\''+item[value]+'\'>'+item[label]+'</option>'));
+			};
+		}
 		return select;
 	};
 	var crearDropDownPaises = function(){
