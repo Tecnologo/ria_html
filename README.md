@@ -1,26 +1,19 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/)
+Para levantar el servidor se debe
 
-[Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/) is a responsive, one page portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). The theme features multiple content sections with an off canvas navigation menu.
+Descargar node y seguir los pasos de instalacion como estan descriptos en el siguiente link https://nodejs.org/download/ 
 
-## Getting Started
+Luego de que este instalado 
 
-To use this template, choose one of the following options to get started:
-* Download the latest release on Start Bootstrap
-* Fork this repository on GitHub
+Abrir linea de comando.
 
-## Bugs and Issues
+navegar hasta la carpeta donde se encuentra el archivo server.js 
 
-Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-stylish-portfolio/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/stylish-portfolio/).
+ejecutar node server.js
 
-## Creator
+luego de esto se abre el archivo index.html.
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+Nota: como el web service que consumimos tuvo un percance. muchos paises no mustran regiones.
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+RECOMENDAMOS PROBAR LA FUNCIONALIDAD ELIGIENDO PAIS 'INDIA' Y PROBAR VARIAS DE SUS REGIONES PARA VER LAS DIFERENTES ACTUALIZACIONES DE CLIMA.
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-## Copyright and License
-
-Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-stylish-portfolio/blob/gh-pages/LICENSE) license.
