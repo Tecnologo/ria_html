@@ -37,7 +37,7 @@ var controller = (function($, provider){
 
 	};
 	var buscarClima = function(){
-		return  provider.buscarClima(countryCode, cityCode).then(function(dataRaw){
+		return  provider.buscarClima(nombreCountry, cityName).then(function(dataRaw){
 			return dataRaw;
 		});
 
@@ -79,6 +79,27 @@ var controller = (function($, provider){
 			name: "Andhra Pradesh"
 		}
 	**/
+	var mostrarClima = function(){
+		buscarClima(nombreCountry, cityCode).then(function(e){
+			$('#climatable',container).remove();	
+			var table = $('<table id="climatable"></table>');
+			var header = $('<tr></tr>');
+			var body = $('<tr></tr>');
+			for(n in e){
+				if(e.hasOwnProperty(n)){
+					var headerTitle = $('<th></th>');
+					headerTitle.html(n);
+					header.append(headerTitle);
+					var bodyCol = $('<td></td>');
+					bodyCol.html(e[n]);
+					body.append(bodyCol);
+				}
+			}
+			table.append(header);
+			table.append(body);
+			container.append(table);
+		});
+	};
 	publicScope.listarRegiones = function(){
 		obtenerTerritorioPorPais().then(function(regiones){
 			console.info(regiones)
@@ -87,6 +108,7 @@ var controller = (function($, provider){
 			select.change(function(e){
 				cityCode = select.val();
 				cityName = select.find("option:selected").text();
+				mostrarClima();
 			});
 
 			/*agrego el dropdown al documento*/

@@ -237,3 +237,14 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+#climatable{
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  margin-top: 24px;
+}
+
+#climatable td, #climatable th {
+      padding: 10px;
+}

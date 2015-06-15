@@ -41,9 +41,9 @@ var provider = (function($){
 			return response.RestResponse.result;
 		});
 	};
-	publicScope.buscarClima = function(countryCode, cityCode){
+	publicScope.buscarClima = function(countryName, cityName){
 		return $.ajax({
-		  url: ENDPOINTS.baseURL + ENDPOINTS.OBTENER_CLIMA_POR_LUGAR.replace('{COUNTRY_NAME}', countryCode).replace('{CUIDAD}', cityCode)
+		  url: ENDPOINTS.baseURL + ENDPOINTS.OBTENER_CLIMA_POR_LUGAR.replace('{COUNTRY_NAME}', countryName).replace('{CUIDAD}', cityName)
 		}).then(function(response){
 			return response.RestResponse.result;
 		});
